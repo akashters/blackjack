@@ -1,8 +1,8 @@
 #pragma once
+
 #include <vector>
 #include <memory>
-#include "rank.hpp"
-#include "suit.hpp"
+
 #include "card.hpp"
 
 class Deck

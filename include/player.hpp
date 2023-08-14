@@ -1,8 +1,8 @@
 #pragma once
+
 #include <vector>
 #include <memory>
-#include "rank.hpp"
-#include "suit.hpp"
+
 #include "card.hpp"
 
 class Player
@@ -16,4 +16,6 @@ public:
     int evaluate() const noexcept;
 
     void print_hand() const noexcept;
+
+    bool is_black_jack() const noexcept;
 };

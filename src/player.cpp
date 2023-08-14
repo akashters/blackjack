@@ -1,4 +1,5 @@
 #include <iostream>
+
 #include "player.hpp"
 #include "card.hpp"
 #include "rank.hpp"
@@ -80,4 +81,9 @@ void Player::print_hand() const noexcept
 
         std::cout << "\n";
     }
+}
+
+bool Player::is_black_jack() const noexcept
+{
+    return hand.size() == 2 && evaluate() == 21;
 }

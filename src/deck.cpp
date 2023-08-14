@@ -2,6 +2,7 @@
 #include <memory>
 #include <vector>
 #include <algorithm>
+
 #include "rank.hpp"
 #include "suit.hpp"
 #include "card.hpp"
@@ -26,6 +27,10 @@ std::size_t Deck::size() const noexcept
 
 std::unique_ptr<Card> Deck::draw_top() noexcept
 {
+    if (cards.empty())
+    {
+        return nullptr;
+    }
     std::unique_ptr<Card> card = std::move(cards.back());
     cards.pop_back();
     return card;
